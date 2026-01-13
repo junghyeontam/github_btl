@@ -5,6 +5,7 @@
 #include "SinhVien.h"
 #include <vector>
 
+
 class QuanLyThuVien {
 private:
     vector<Sach*> dsSach;
@@ -12,24 +13,24 @@ private:
     
     Sach* timSach(string ma);
     SinhVien* timSV(string ma);
-    void luu();
-    void doc();
+    void luuDuLieu();
+    void docDuLieu();
 
 public:
     QuanLyThuVien();
     ~QuanLyThuVien();
     
-    void themSach();
-    void suaSach();
-    void xoaSach();
-    void themSV();
-    void suaSV();
-    void xoaSV();
-    void muonSach();
-    void traSach();
-    void inSach();
-    void inSachSV();
-    void inSachDangMuon();
+    void themSach();              
+    void suaSach();               
+    void xoaSach();                
+    void themSV();               
+    void suaSV();                 
+    void xoaSV();                 
+    void muonSach();               
+    void traSach();                
+    void lietKeToanBoSach();       
+    void lietKeSachCuaSV();        
+    void lietKeSachDangMuon();    
 };
 
 #endif

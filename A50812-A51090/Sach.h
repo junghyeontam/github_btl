@@ -3,6 +3,7 @@
 
 #include "TaiLieu.h"
 
+
 class Sach : public TaiLieu {
 private:
     string tacGia;
@@ -10,17 +11,18 @@ private:
 
 public:
     Sach();
-
-    void nhap() override;
-    void xuat() const override;
+    Sach(string ma, string ten, string tg, string nxb, int nam, string tl);
     
-    void ghiFile(ofstream& f) const;
+    void nhap();
+    void xuat();
+    
+    void ghiFile(ofstream& f);
     void docFile(ifstream& f);
     
-    void setTacGia(string tg) { tacGia = tg; }
-    void setTheLoai(string tl) { theLoai = tl; }
-    void setNXB(string nxb) { nhaXuatBan = nxb; }
-    void setNam(int n) { namXuatBan = n; }
+    string getTacGia();
+    string getTheLoai();
+    void setTacGia(string tg);
+    void setTheLoai(string tl);
 };
 
 #endif

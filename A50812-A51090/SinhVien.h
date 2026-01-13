@@ -3,6 +3,7 @@
 
 #include "DoiTuong.h"
 #include <vector>
+#include <fstream>
 
 // TÍNH KẾ THỪA
 class SinhVien : public DoiTuong {
@@ -13,24 +14,24 @@ private:
 
 public:
     SinhVien();
+    SinhVien(string ma, string ten, string lop, string khoa);
     
     // TÍNH ĐA HÌNH - Override
-    void nhap() override;
-    void xuat() const override;
+    void nhap();
+    void xuat();
     
-    // Đọc/ghi file
-    void ghiFile(ofstream& f) const;
+    void ghiFile(ofstream& f);
     void docFile(ifstream& f);
     
-    // Quản lý mượn sách
-    void themSach(string maSach) { dsSachMuon.push_back(maSach); }
-    void xoaSach(string maSach);
-    bool dangMuonSach() const { return !dsSachMuon.empty(); }
-    vector<string> getDsSach() const { return dsSachMuon; }
+    void themSach(string ma);
+    void xoaSach(string ma);
+    bool dangMuonSach();
+    vector<string> getDsSach();
     
-    // Setter
-    void setLop(string l) { lop = l; }
-    void setKhoa(string k) { khoa = k; }
+    string getLop();
+    string getKhoa();
+    void setLop(string l);
+    void setKhoa(string k);
 };
 
 #endif
