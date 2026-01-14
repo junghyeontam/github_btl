@@ -93,8 +93,7 @@ void SinhVien::xoaSach(string ma) {
         if (dsSachMuon[i] == ma) {
             dsSachMuon.erase(dsSachMuon.begin() + i);
             break;
-        }
-    }
+    }}
 }
 
 bool SinhVien::dangMuonSach() {
@@ -105,21 +104,16 @@ bool SinhVien::dangMuonSach() {
 }
 
 vector<string> SinhVien::getDsSach() {
-    return dsSachMuon;
-}
+    return dsSachMuon; }
 
 string SinhVien::getLop() {
-    return lop;
-}
+    return lop; }
 
 string SinhVien::getKhoa() {
-    return khoa;
-}
+    return khoa; }
 
 void SinhVien::setLop(string l) {
-    lop = l;
-}
+    lop = l; }
 
 void SinhVien::setKhoa(string k) {
-    khoa = k;
-}
+    khoa = k; }
