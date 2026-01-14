@@ -82,7 +82,7 @@ void QuanLyThuVien::themSach() {
     s->nhap();
     
     if (timSach(s->getMa()) != nullptr) {
-        cout << "Loi: Ma sach da ton tai" << endl;
+        cout << "Ma sach da ton tai" << endl;
         delete s;
         return;
     }
@@ -99,7 +99,7 @@ void QuanLyThuVien::suaSach() {
     
     Sach* s = timSach(ma);
     if (s == nullptr) {
-        cout << "Loi: Khong tim thay sach" << endl;
+        cout << "Khong tim thay sach" << endl;
         return;
     }
     
@@ -111,17 +111,16 @@ void QuanLyThuVien::suaSach() {
 
 void QuanLyThuVien::xoaSach() {
     string ma;
-    cout << "Nhap ma sach can xoa: ";
-    cin >> ma;
+    cout << "Nhap ma sach can xoa: "; cin >> ma;
     
     Sach* s = timSach(ma);
     if (s == nullptr) {
-        cout << "Loi: Khong tim thay sach!" << endl;
+        cout << "Khong tim thay sach!" << endl;
         return;
     }
     
     if (s->isDangMuon() == true) {
-        cout << "Loi: Khong the xoa sach dang duoc muon!" << endl;
+        cout << "Khong the xoa sach dang duoc muon!" << endl;
         return;
     }
     
@@ -142,14 +141,14 @@ void QuanLyThuVien::themSV() {
     sv->nhap();
     
     if (timSV(sv->getMa()) != nullptr) {
-        cout << "Loi: Ma sinh vien da ton tai!" << endl;
+        cout << "Ma sinh vien da ton tai!" << endl;
         delete sv;
         return;
     }
     
     dsSV.push_back(sv);
     luuDuLieu();
-    cout << "Them sinh vien thanh cong!" << endl;
+    cout << "Them sinh vien thanh cong" << endl;
 }
 
 void QuanLyThuVien::suaSV() {
@@ -159,7 +158,7 @@ void QuanLyThuVien::suaSV() {
     
     SinhVien* sv = timSV(ma);
     if (sv == nullptr) {
-        cout << "Loi: Khong tim thay sinh vien!" << endl;
+        cout << "Khong tim thay sinh vien!" << endl;
         return;
     }
     
@@ -176,12 +175,12 @@ void QuanLyThuVien::xoaSV() {
     
     SinhVien* sv = timSV(ma);
     if (sv == nullptr) {
-        cout << "Loi: Khong tim thay sinh vien!" << endl;
+        cout << "Khong tim thay sinh vien!" << endl;
         return;
     }
     
     if (sv->dangMuonSach() == true) {
-        cout << "Loi: Khong the xoa sinh vien dang muon sach!" << endl;
+        cout << "Khong the xoa sinh vien dang muon sach!" << endl;
         return;
     }
     
@@ -208,17 +207,17 @@ void QuanLyThuVien::muonSach() {
     Sach* s = timSach(maSach);
     
     if (sv == nullptr) {
-        cout << "Loi: Khong tim thay sinh vien!" << endl;
+        cout << "Khong tim thay sinh vien!" << endl;
         return;
     }
     
     if (s == nullptr) {
-        cout << "Loi: Khong tim thay sach!" << endl;
+        cout << "Khong tim thay sach!" << endl;
         return;
     }
     
     if (s->isDangMuon() == true) {
-        cout << "Loi: Sach da duoc muon!" << endl;
+        cout << "Sach da duoc muon!" << endl;
         return;
     }
     
@@ -241,22 +240,22 @@ void QuanLyThuVien::traSach() {
     Sach* s = timSach(maSach);
     
     if (sv == nullptr) {
-        cout << "Loi: Khong tim thay sinh vien!" << endl;
+        cout << "Khong tim thay sinh vien!" << endl;
         return;
     }
     
     if (s == nullptr) {
-        cout << "Loi: Khong tim thay sach!" << endl;
+        cout << "Khong tim thay sach!" << endl;
         return;
     }
     
     if (s->isDangMuon() == false) {
-        cout << "Loi: Sach chua duoc muon!" << endl;
+        cout << "Sach chua duoc muon!" << endl;
         return;
     }
     
     if (s->getMaNguoiMuon() != maSV) {
-        cout << "Loi: Sinh vien nay khong muon sach nay!" << endl;
+        cout << "Sinh vien nay khong muon sach nay!" << endl;
         return;
     }
     
@@ -274,11 +273,11 @@ void QuanLyThuVien::lietKeToanBoSach() {
         return;
     }
     
-    cout << "\n========== DANH SACH TOAN BO SACH ==========" << endl;
+    cout << "\n___________ DANH SACH TOAN BO SACH_________" << endl;
     for (int i = 0; i < dsSach.size(); i++) {
         cout << "STT " << (i + 1) << ":" << endl;
         dsSach[i]->xuat();
-        cout << "--------------------------------------------" << endl;
+        cout << "________________________________________" << endl;
     }
 }
 
@@ -289,7 +288,7 @@ void QuanLyThuVien::lietKeSachCuaSV() {
     
     SinhVien* sv = timSV(ma);
     if (sv == nullptr) {
-        cout << "Loi: Khong tim thay sinh vien!" << endl;
+        cout << "Khong tim thay sinh vien!" << endl;
         return;
     }
     
