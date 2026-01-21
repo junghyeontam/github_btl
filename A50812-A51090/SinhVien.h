@@ -5,7 +5,6 @@
 #include <vector>
 #include <fstream>
 
-// TÍNH KẾ THỪA
 class SinhVien : public DoiTuong {
 private:
     string lop;
@@ -16,7 +15,7 @@ public:
     SinhVien();
     SinhVien(string ma, string ten, string lop, string khoa);
     
-    // TÍNH ĐA HÌNH - Override
+
     void nhap();
     void xuat();
     

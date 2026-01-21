@@ -21,8 +21,11 @@ void SinhVien::nhap() {
 }
 
 void SinhVien::xuat() {
-    cout << ma << " | " << ten << " | " << lop << " | " 
-         << khoa << " | So sach muon: " << dsSachMuon.size() << endl;
+    cout << "  Ma sinh vien : " << ma << endl;
+    cout << "  Ten sinh vien: " << ten << endl;
+    cout << "  Lop          : " << lop << endl;
+    cout << "  Khoa         : " << khoa << endl;
+    cout << "  So sach muon : " << dsSachMuon.size() << endl;
 }
 
 void SinhVien::ghiFile(ofstream& f) {

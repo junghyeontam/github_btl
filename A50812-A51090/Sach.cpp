@@ -24,8 +24,13 @@ void Sach::nhap() {
 }
 
 void Sach::xuat() {
-    cout << ma << " | " << ten << " | " << tacGia << " | " 
-         << theLoai << " | " << nhaXuatBan << " (" << namXuatBan << ") | ";
+    cout << "  Ma sach      : " << ma << endl;
+    cout << "  Ten sach     : " << ten << endl;
+    cout << "  Tac gia      : " << tacGia << endl;
+    cout << "  The loai     : " << theLoai << endl;
+    cout << "  Nha xuat ban : " << nhaXuatBan << endl;
+    cout << "  Nam xuat ban : " << namXuatBan << endl;
+    cout << "  Trang thai   : ";
     if (dangMuon == true) {
         cout << "Dang muon";
     } else {
