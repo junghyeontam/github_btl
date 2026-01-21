@@ -15,12 +15,12 @@ Sach::Sach(string ma, string ten, string tg, string nxb, int nam, string tl)
 
 void Sach::nhap() {
     cin.ignore();
-    cout << "ma sach: "; getline(cin, ma);
-    cout << "ten sach: "; getline(cin, ten);
-    cout << "tac gia: "; getline(cin, tacGia);
-    cout << "the loai: "; getline(cin, theLoai);
-    cout << "nha xuat ban: "; getline(cin, nhaXuatBan);
-    cout << "nam xuat ban: "; cin >> namXuatBan;
+    cout << "Ma sach: "; getline(cin, ma);
+    cout << "Ten sach: "; getline(cin, ten);
+    cout << "Tac gia: "; getline(cin, tacGia);
+    cout << "The loai: "; getline(cin, theLoai);
+    cout << "Nha xuat ban: "; getline(cin, nhaXuatBan);
+    cout << "Nam xuat ban: "; cin >> namXuatBan;
 }
 
 void Sach::xuat() {

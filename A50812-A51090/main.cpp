@@ -7,7 +7,7 @@ int main() {
     int chon;
     do {
         cout << "___________________________________________" << endl;
-        cout << "HE THONG QUAN LY THU VIEN " << endl;
+        cout << "________HE THONG QUAN LY THU VIEN________" << endl;
         cout << "1.Nhap them 1 cuon sach: " << endl;
         cout << "2.Sua thong tin sach (theo ma): " << endl;
         cout << "3.Xoa 1 cuon sach (theo ma): " << endl;
