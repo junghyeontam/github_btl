@@ -82,11 +82,11 @@ void QuanLyThuVien::themSach() {
     s->nhap();
     
     if (timSach(s->getMa()) != nullptr) {
-        cout << "Ma sach da ton tai" << endl;
+        cout << "Ma sach da ton tai!" << endl;
         delete s;
         return;
     }
-
+    
     dsSach.push_back(s);
     luuDuLieu();
     cout << "Them sach thanh cong" << endl;
@@ -99,19 +99,20 @@ void QuanLyThuVien::suaSach() {
     
     Sach* s = timSach(ma);
     if (s == nullptr) {
-        cout << "Khong tim thay sach" << endl;
+        cout << "Khong tim thay sach!" << endl;
         return;
     }
     
     cout << "Nhap thong tin moi:" << endl;
     s->nhap();
     luuDuLieu();
-    cout << "Sua sach thanh cong" << endl;
+    cout << "Sua sach thanh cong!" << endl;
 }
 
 void QuanLyThuVien::xoaSach() {
     string ma;
-    cout << "Nhap ma sach can xoa: "; cin >> ma;
+    cout << "Nhap ma sach can xoa: ";
+    cin >> ma;
     
     Sach* s = timSach(ma);
     if (s == nullptr) {
@@ -148,7 +149,7 @@ void QuanLyThuVien::themSV() {
     
     dsSV.push_back(sv);
     luuDuLieu();
-    cout << "Them sinh vien thanh cong" << endl;
+    cout << "Them sinh vien thanh cong!" << endl;
 }
 
 void QuanLyThuVien::suaSV() {
@@ -273,11 +274,11 @@ void QuanLyThuVien::lietKeToanBoSach() {
         return;
     }
     
-    cout << "\n___________ DANH SACH TOAN BO SACH_________" << endl;
+    cout << "\n_____________DANH SACH TOAN BO SACH____________" << endl;
     for (int i = 0; i < dsSach.size(); i++) {
         cout << "STT " << (i + 1) << ":" << endl;
         dsSach[i]->xuat();
-        cout << "________________________________________" << endl;
+        cout << "______________________________________________" << endl;
     }
 }
 
@@ -298,13 +299,13 @@ void QuanLyThuVien::lietKeSachCuaSV() {
         return;
     }
     
-    cout << "\nSACH CUA SINH VIEN " << sv->getTen() << "" << endl;
+    cout << "\n____________SACH CUA SINH VIEN " << sv->getTen() << "______________" << endl;
     for (int i = 0; i < ds.size(); i++) {
         Sach* s = timSach(ds[i]);
         if (s != nullptr) {
             cout << "STT " << (i + 1) << ":" << endl;
             s->xuat();
-            cout << "______________" << endl;
+            cout << "_______________________________________" << endl;
         }
     }
 }
@@ -312,7 +313,7 @@ void QuanLyThuVien::lietKeSachCuaSV() {
 void QuanLyThuVien::lietKeSachDangMuon() {
     bool coSachMuon = false;
     
-    cout << "\n_DANH SACH SACH DANG DUOC MUON _" << endl;
+    cout << "\n___________________DANH SACH SACH DANG DUOC MUON__________________" << endl;
     int stt = 1;
     for (int i = 0; i < dsSach.size(); i++) {
         if (dsSach[i]->isDangMuon() == true) {
@@ -324,7 +325,7 @@ void QuanLyThuVien::lietKeSachDangMuon() {
             if (sv != nullptr) {
                 cout << "Nguoi muon: " << sv->getTen() << " (Ma: " << sv->getMa() << ")" << endl;
             }
-            cout << "______________________" << endl;
+            cout << "_______________________________________" << endl;
             stt = stt + 1;
         }
     }
